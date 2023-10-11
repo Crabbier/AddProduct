@@ -14,11 +14,13 @@ body {
     margin-top: 0%;
     margin-bottom: 0%;
     box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.400);
+    height: 100vh;
 }
 
 main::before {
     content: "";
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -31,6 +33,7 @@ main {
     background-size: cover;
     background-position: center;
     position: relative;
+    z-index: 1;
     color: #ccc;
     text-shadow: 2px 2px 4px #000000;
     text-align: center;
@@ -52,6 +55,38 @@ main table {
     z-index: 2;
     /* height: 100vh; */
 }
+
+main p {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+main a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(179, 0, 0);
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    border-style:hidden;
+    border-radius: 10%;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.400);
+}
+
+main a:hover {
+    color: white;
+    background-color: red;
+}
+
+main a:focus {
+    color: whitesmoke;
+    background-color: rgb(117, 0, 0);
+}
+
 
 footer {
     background-color: rgb(24, 24, 24);
@@ -195,7 +230,7 @@ header nav a:active {
 }
 
 .myForm{
-    padding: 5%;
+    /* padding: 5%; */
     align-items: center;
     justify-content: center;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -228,11 +263,63 @@ body#view {
     color: white;
 }
 
-body#view div {
+/* body#view div {
     margin-bottom: 0;
+} */
+
+body#add {
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 81vh;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    z-index: 1;
 }
 
 .table {
     color: white;
 }
 
+.addButton {
+    background-color: rgb(173, 0, 0);
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-style:initial;
+    border-radius: 20%;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.400);
+}
+
+.addButton:hover {
+    background-color: red;
+    color: black;
+}
+
+.addButton:focus {
+    background-color: white;
+    color: red;
+}
+
+.resetButton {
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-style:initial;
+    border-radius: 20%;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.400);
+}
+
+.resetButton:hover {
+    background-color: black;
+    color: red;
+}
+
+.resetButton:focus {
+    background-color: white;
+    color: black;
+}

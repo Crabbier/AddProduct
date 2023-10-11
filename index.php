@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Products</title>
+    <title>4Revolution | Form</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="images/Logo4R.png" type="image/x-icon" />
 </head>
@@ -24,8 +24,8 @@
         </section>
     <main>
         <section class="form-register">
-            <form method="post" class="myForm">
-                <h2>Add a New Product: </h2>
+            <form method="post" action="add.php" class="myForm">
+                <h2>ADD NEW PRODUCT </h2>
                     <div class="form-group">
                         <label for="input1" class="col-sm-2 control-label">REGISTER DATE</label>
                         <div class="col-sm-10">
@@ -80,28 +80,11 @@
                         </div>
                     </div>
 					<div class="form-group">
-						 <input type="submit" class="buttons" value="Submit">
+						 <input type="submit" name="Submit "class="addButton" value="Add">
+                         <input type="reset" class="resetButton" value="Clear">
 					</div>
             </form>
             <div class="form-group submit-message">
-            <?php
-                require_once('database.php');
-                
-                if(!empty($_POST)){
-                    $date = $_POST['date'];
-                    $name = $_POST['name'];
-                    $color = $_POST['color'];
-                    $category = $_POST['category'];
-                    $brand = $_POST['brand'];
-                    $description = $_POST['description'];
-                    $res   = $database->create($date, $name, $color, $category, $brand, $description);
-                    if($res){
-                        echo "<p>Successfully inserted data</p>";
-                    }else{
-                        echo "<p>Failed to insert data</p>";
-                    }
-                }
-            ?>
             </div>
         </section>
     </main>

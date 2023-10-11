@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2023 at 06:57 AM
+-- Generation Time: Oct 11, 2023 at 04:11 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -46,7 +46,8 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `name`, `color`, `category`, `brand`, `description`, `date`) VALUES
 (1, 'PD Daytona001', 'Silver', '', 'Quartz Watch', '- 10 ATM\r\n- 316L Stainless Steel\r\n- Zapphire crystal', '2023-10-10'),
 (2, 'LG2407', 'Copper', '', 'Automatic Watch', '- Premium watch', '2023-10-10'),
-(3, 'CRRJ3422', 'White', 'Mechanic Watch', 'Curren', '- Great performance \n\r\n- Big model', '2023-10-10');
+(3, 'CRRJ3422', 'White', 'Mechanic Watch', 'Curren', '- Great performance \n\r\n- Big model', '2023-10-10'),
+(4, 'JGR23764', 'Silver', 'Mechanic Watch', 'JRG', '-Leather style', '2023-10-11');
 
 --
 -- Indexes for dumped tables
@@ -66,7 +67,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
